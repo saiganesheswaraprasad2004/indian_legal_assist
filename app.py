@@ -10,7 +10,7 @@ import os
 # For environment/secrets support
 api_key = st.secrets.get("GEMINI_API_KEY", None) or os.getenv("GEMINI_API_KEY", "")
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 @st.cache_resource(show_spinner=False)
 def load_dataset(filepath):
