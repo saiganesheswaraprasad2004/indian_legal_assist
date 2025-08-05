@@ -1,6 +1,6 @@
 streamlit
 python-dotenv
-google-generativeai
 pandas
 scikit-learn
 nltk
+google-generativeai
