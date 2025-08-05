@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Indian Legal AI — FutureLaw Nexus</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900|Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #051937 0%, #184b7a 100%);
+            color: #00ffe7;
+            font-family: 'Share Tech Mono', 'Courier New', monospace;
+            margin: 0; padding: 0;
+        }
+        .container {
+            max-width: 750px;
+            margin: 40px auto;
+            background: rgba(15, 25, 40, 0.88);
+            box-shadow: 0 0 40px #0af;
+            border-radius: 18px;
+            padding: 40px 30px 30px 30px;
+        }
+        h1 {
+            font-family: 'Orbitron', monospace;
+            text-align: center;
+            font-size: 2.3rem;
+            color: #19fff2;
+            letter-spacing: 0.08em;
+            margin-bottom: 28px;
+            text-shadow: 0 0 10px #0af, 0 0 40px #000e3d;
+        }
+        textarea {
+            width: 100%;
+            min-height: 70px;
+            background: rgba(0,10,30,0.8);
+            color: #00ffe7;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            padding: 15px;
+            box-shadow: 0 0 10px #11e2d8;
+            margin-bottom: 10px;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        button {
+            font-family: 'Orbitron', monospace;
+            background: linear-gradient(90deg, #071d41, #00ffe7);
+            color: #000e31;
+            border: none;
+            border-radius: 7px;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 0.09em;
+            cursor: pointer;
+            box-shadow: 0 0 14px #19fff2;
+            transition: background 0.2s, color 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #00ffe7 30%, #184b7a 90%);
+            color: #1bffd6;
+        }
+        .answer-section {
+            margin-top: 38px;
+            border-left: 5px solid #0af;
+            background: rgba(0,255,231,0.08);
+            box-shadow: 0 0 10px #19fff2;
+            padding: 18px 24px;
+            border-radius: 0 13px 13px 0;
+            animation: fadeIn 1.1s;
+        }
+        .ai-icon {
+            font-size: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            text-shadow: 0 0 18px #0af;
+        }
+        .disclaimer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.98rem;
+            color: #17c0ae;
+            opacity: 0.88;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px);}
+          to { opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ai-icon">
+            <span>⚡</span>
+        </div>
+        <h1>Rock Smashers <br> <small style="font-size:.6em;color:#12f7f7;">Indian Legal Q·A</small></h1>
+        <form method="POST" autocomplete="off">
+            <textarea name="query" placeholder="Ask your futuristic legal question here..." required autocapitalize="sentences"></textarea><br>
+            <button type="submit">🧬 Analyze & Respond</button>
+        </form>
+        {% if answer %}
+            <div class="answer-section">
+                <strong>🤖 Legal AI:</strong>
+                <div style="margin-top:10px;font-size:1.11em;line-height:1.48;">{{ answer }}</div>
+            </div>
+        {% endif %}
+        <div class="disclaimer">
+            <hr style="border: 1.5px dashed #0af; margin: 16px 0;">
+            <span>Information is for reference only.<br>No AI system can substitute certified legal counsel. <br />© Rock Smashers, {{2025}}</span>
+        </div>
+    </div>
+</body>
+</html>
